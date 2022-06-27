@@ -7,7 +7,7 @@
 # -DWIN32_STATIC_BUILD (TRUE or FLASE) --- Wenn TRUE wird ein Windows Static Binarie erstellt
 # -DCMAKE_BUILD_TYPE (Release or Debug) --- Build Typ welches erzeugt werden soll (Default is Release)
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.0)
 
 ##################### PROJEKT #####################
 
@@ -102,12 +102,6 @@ set(SOURCES
     src/main.cpp
 )
 
-################### RESOURCEN #####################
-
-if(WIN32)
-    set(WIN_RC ${PROJECT_SOURCE_DIR}/src/${PROJECT_NAME}.rc)
-endif()
-
 ################### EXECUTABLE ####################
 
 if(NOT WIN32)
@@ -120,24 +114,12 @@ if(WIN32)
     target_link_libraries(${PROJECT_NAME} ${WIN32_LIBS})
 endif()
     
-################### INSTALL #######################
-
-# Set DataPath
-if(WIN32)
-    add_definitions("-DDATA_PATH=\"./data/\"")
-else()
-    add_definitions("-DDATA_PATH=\"${CMAKE_INSTALL_PREFIX}/share/${PROJECT_NAME}/data/\"")
-endif()
-
 ############ Install Binary und Daten #############
 if(WIN32)
 
     ################## Windows #################
     # Install Binary
     install(TARGETS ${PROJECT_NAME} DESTINATION ./)
-
-    # Install all Datas
-    install(FILES "data/sdl2_app.png" DESTINATION ./data)
 
     # Sonstiges
     install(FILES "LICENSE" DESTINATION ./)
@@ -146,13 +128,6 @@ else()
     ################## Linux #################
     # Install Binary
     install(TARGETS ${PROJECT_NAME} DESTINATION bin)
-
-    # Install all Datas
-    install(FILES "data/sdl2_app.png" DESTINATION ./data)
-
-    # Install Startmenü Eintrag
-    install(FILES "src/${PROJECT_NAME}.desktop" DESTINATION share/applications)
-    install(FILES "data/${PROJECT_NAME}.png" DESTINATION share/icons/hicolor/64x64/apps)
 
     # Sonstiges
     install(FILES "LICENSE" DESTINATION share/${PROJECT_NAME})
