@@ -100,6 +100,9 @@ message(STATUS "Architektur: ${ARCHITECTURE}")
 
 set(SOURCES
     src/main.cpp
+    src/command_line_class.cpp
+    src/command_line_class.h
+    src/command_list.h
 )
 
 ################### EXECUTABLE ####################
