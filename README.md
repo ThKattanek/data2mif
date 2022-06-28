@@ -1,7 +1,7 @@
 # -- data2mif --
 A consol tool to create a mif (memory init file) for fpga or eeprom.
 
-### [Lastest windows release is here...](https://github.com/ThKattanek/data2miff/releases/latest)
+### [Lastest windows release is here...](https://github.com/ThKattanek/data2mif/releases/latest)
 
 ### Use
 ```bash
