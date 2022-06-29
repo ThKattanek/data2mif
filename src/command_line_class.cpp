@@ -186,7 +186,7 @@ int CommandLineClass::GetArgInt(int number, bool *err)
 
 void CommandLineClass::ShowHelp()
 {
-	printf("\nProgram call: %s [OPTIONS]\n\nThe following options are available to you:\n\n", app_name);
+	printf("\nProgram call: %s [OPTIONS]\n\nThe following options are available for you:\n\n", app_name);
 
     for(int i=0; i<all_commands_list_count; i++)
     {
