@@ -16,7 +16,7 @@ The following options are available to you:
   -o, --outputfile   Output Filename (MIF).
   -f, --format       Output Format: 'bin' or 'hex' (default: 'hex').
   -b, --bitperline   Output bits per line when 'bin' format. (default: 4)
-  -h, --hexsize      Output Hex size (4,8,16,32,64) when 'hex' format. (default: 16)
+  -h, --hexsize      Output Hex size (4,8,12,16,...) when 'hex' format. (default: 16)
 ```
 
 ### Build and installation under linux
