@@ -14,14 +14,16 @@ The following options are available to you:
       --version      Show the current version number.
   -i, --inputfile    Input Filename.
   -o, --outputfile   Output Filename (MIF).
-  -b, --bitperline   Output bits per line in the mif file. (default: 4)
+  -f, --format       Output Format: 'bin' or 'hex' (default: 'hex').
+  -b, --bitperline   Output bits per line when 'bin' format. (default: 4)
+  -h, --hexsize      Output Hex size (4,8,16,32,64) when 'hex' format. (default: 16)
 ```
 
 ### Build and installation under linux
 ```bash
 git clone https://github.com/ThKattanek/data2mif.git
 cd data2mif
-git checkout 0.1.0
+git checkout 0.2.0
 mkdir build
 cd build
 cmake .. 
