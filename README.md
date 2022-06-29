@@ -8,7 +8,7 @@ A consol tool to create a mif (memory init file) for fpga or eeprom.
 data2mif --help
 Program call: data2mif [OPTIONS]
 
-The following options are available to you:
+The following options are available for you:
 
   -?, --help         This text.
       --version      Show the current version number.
